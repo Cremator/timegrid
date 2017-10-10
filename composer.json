@@ -50,13 +50,14 @@
         "alariva/tidiochat": "^2.0",
         "timegridio/concierge": "dev-master#90e65c",
         "jenssegers/rollbar": "^1.5",
-        "eluceo/ical": "~0.11",
+        "eluceo/ical": "^0.11",
         "snowfire/beautymail": "dev-master",
         "timegridio/icalreader": "dev-master",
         "spatie/laravel-cookie-consent": "^1.2",
         "torann/geoip": "1.0.*",
         "geoip2/geoip2": "~2.1",
-        "seanstewart/plan-config": "dev-master"
+        "seanstewart/plan-config": "dev-master",
+        "nesbot/carbon": "^1.22"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^2.0",

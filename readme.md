@@ -1,3 +1,5 @@
+> :warning: **IMPORTANT WARNING** :warning: This project will become unsupported by 01/01/2018. If you require further information, please contact the author.
+
 <a href="http://www.timegrid.io/">
     <img src="http://i.imgur.com/pUUoU6H.png" alt="timegrid.io" title="timegrid.io" align="right" />
 </a>
@@ -10,7 +12,6 @@ timegrid
 [![Code Climate](https://codeclimate.com/github/timegridio/timegrid/badges/gpa.svg)](https://codeclimate.com/github/timegridio/timegrid)
 [![Test Coverage](https://codeclimate.com/github/timegridio/timegrid/badges/coverage.svg)](https://codeclimate.com/github/timegridio/timegrid/coverage)
 [![Current Beta](https://img.shields.io/badge/dev--beta-5.0-yellow.svg?style=flat-square)](http://demo.timegrid.io/)
-[![Codewake](https://www.codewake.com/badges/ask_question_flat_square.svg)](https://www.codewake.com/p/timegrid)
 [![License](https://img.shields.io/:license-AGPL--3.0-blue.svg?style=flat-square)](http://www.gnu.org/licenses/agpl-3.0.txt)
 
 > **Timegrid** helps contractors and customers to find the perfect meeting time through *online appointments*.
@@ -52,6 +53,8 @@ timegrid
 
 ## Installing
 
+> :warning: **IMPORTANT WARNING** :warning: This project will become unsupported by 01/01/2018. If you require further information, please contact the author.
+
 Read the [INSTALLING](INSTALLING.md) section.
 
 Get started in 10 min with a [Docker image](https://github.com/timegridio/dockerfiles) for development environment.
@@ -63,9 +66,11 @@ Current supported user interface languages are:
   * American English (`en_US`)
   * Spanish (`es_ES` and `es_AR`)
   * Italian (`it_IT`)
+  * French (`fr_FR`)
+  * Russian (`ru_RU`)
+  * Armenian (`am_HY`)
 
-Future targeted translations might be French and Arabic, however, feel free to contribute with your preferred 
-translation!
+Feel free to contribute with your preferred translation!
 
 ## Appointment Library
 
@@ -77,18 +82,25 @@ Timegrid uses [Concierge package](https://github.com/timegridio/concierge) for d
 
 Timegrid is developed and maintained by [Ariel Vallese](http://alariva.com).
 
-### Author Notes
-
-Timegrid was born as a pet project and aimed to solve my own needs as a freelancer.
-Contributions and suggestions are welcome!
-
 ## Contributing
 
-Just get involved.
+Contributions are welcome. **Please read the following notes.**
 
-[![Reserve Your Seat](http://i.imgur.com/pgkEz87.png)](https://timegrid.io/dev)
+### Author Notes
 
-Or just [jump in our Trello board](https://trello.com/b/VNFqnxhc/timegrid-io-dev)
+:warning: **IMPORTANT NOTE**
+
+Dear tiny but human-qualified community,
+
+Timegrid was born as a pet project and aimed to solve my own needs as a freelancer.
+I'm also happy to hear that timegrid helped to solve a problem for others, at least partially.
+
+That said, I'm sorry to mention that currently overloaded with other projects, I won't be
+able to keep up on timegrid development on a fulltime basis like before.
+
+PR's and other contributions, as well as regular maintenance will still take place.
+
+Thanks for your patience and thanks for being around.
 
 ## Special Thanks & Credits
 
@@ -107,8 +119,13 @@ Or just [jump in our Trello board](https://trello.com/b/VNFqnxhc/timegrid-io-dev
   * [Webearit.com](https://www.webearit.com/) for contribution on Italian translation
   * [Draganrakovic](https://github.com/draganrakovic) for contributions
   * [Nerxo](https://github.com/Nerxo) for contributions
+  * [Sahil Sharma](https://github.com/sahilsharma011) for contributions and smart suggestions
+  * [Mohammed Hicham](https://github.com/himan72) for contribution on French translation
+  * Ani Shahbazyan for contribution on Russian and Armenian translations
   * Using modified icon originally made by [SimpleIcon](http://www.flaticon.com/authors/simpleicon) from www.flaticon.com
 
 ## License
 
 Timegrid is open-sourced software licensed under the [AGPL](http://www.gnu.org/licenses/agpl-3.0-standalone.html)
+
+May all beings be happy.

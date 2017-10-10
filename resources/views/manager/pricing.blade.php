@@ -23,6 +23,29 @@
         -webkit-transition: 300ms;
         transition: 300ms;
     }
+
+	.flat .plan li.noZoom {
+		 -o-transition-property: none !important;
+		 -moz-transition-property: none !important;
+		 -ms-transition-property: none !important;
+		 -webkit-transition-property: none !important;
+		 transition-property: none !important;
+
+		 /*CSS transforms*/
+		 -o-transform: none !important;
+		 -moz-transform: none !important;
+		 -ms-transform: none !important;
+		 -webkit-transform: none !important;
+		 transform: none !important;
+
+		 /*CSS animations*/
+		 -webkit-animation: none !important;
+		 -moz-animation: none !important;
+		 -o-animation: none !important;
+		 -ms-animation: none !important;
+		 animation: none !important;
+	}
+    
     .flat .plan li.plan-price {
         font-family: 'Lato', sans-serif;
         font-size: 2em;
@@ -61,12 +84,21 @@
         -ms-transform: scale(1.05);
         transform: scale(1.05);
     }
-    .plan-action .btn{
+
+    .flat .plan.featured :hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    .plan-action .btn {
         font-family: 'Lato', sans-serif;
         font-size: 1.5em;
         border: 0px;
+        -webkit-transition: 300ms;
+        transition: 300ms;
     }
-    .plan-action .btn:hover{
+    .plan-action .btn:hover {
         background-color: #5CB85C;
     }
     .flat .plan.featured li.plan-name {
@@ -92,14 +124,14 @@
         <div class="col-lg-offset-3 col-md-offset-3 col-xs-offset-1">
             <div class="col-lg-4 col-md-4 col-xs-6">
                 <ul class="plan plan1 featured" id="plan1">
-                    <li class="plan-name">
+                    <li class="plan-name noZoom">
                         {{trans('pricing.plan.free.name')}}
                     </li>
-                    <li class="plan-hint">
+                    <li class="plan-hint noZoom">
                         {{trans('pricing.plan.free.hint')}}
                     </li>
                     <li class="plan-price">
-                        <big><span class="label label-success"><strong>{{trans('pricing.free')}}</strong></span></big>
+                        <span class="label label-success"><strong>{{trans('pricing.free')}}</strong></span>
                     </li>
                     <li id="p1_appointments">
                         {!! trans('pricing.feature.unlimited_appointments') !!}
@@ -113,6 +145,9 @@
                     <li id="p1_specialists">
                         {!! trans('pricing.feature.one_specialist') !!}
                     </li>
+                    <li class="noZoom">
+						<strike>{{ trans('pricing.feature.customized_support') }}</strike>
+                    </li>
                     <li class="plan-action">
                         <a href="{{ route('manager.business.register', ['plan' => 'free']) }}" class="btn btn-danger btn-lg">{!! Icon::cloud_upload() !!}&nbsp;{{ trans('pricing.plan.free.submit') }}</a>
                     </li>
@@ -124,7 +159,7 @@
                     <li class="plan-name">
                         {{trans('pricing.plan.premium.name')}}
                     </li>
-                    <li class="plan-hint">
+                    <li class="plan-hint noZoom">
                         {{trans('pricing.plan.premium.hint')}}
                     </li>
                     <li class="plan-price">
@@ -168,32 +203,33 @@
 var tour = new Tour({
     duration: 6500,
     delay: 1000,
+    template: "@include('tour._template')",
     steps: [
     {
         element: "#plan1",
-        title: "{{trans('tour.pricing.step1.title')}}",
-        content: "{{trans('tour.pricing.step1.content')}}",
+        title: "{{ trans('tour.pricing.step0.title') }}",
+        content: "{{ trans('tour.pricing.step0.content') }}",
         placement: "left"
     },
     {
+        element: "#p1_appointments",
+        title: "{{ trans('tour.pricing.step1.title') }}",
+        content: "{{ trans('tour.pricing.step1.content') }}"
+    },
+    {
         element: "#p1_contacts",
-        title: "{{trans('tour.pricing.step2.title')}}",
-        content: "{{trans('tour.pricing.step2.content')}}"
+        title: "{{ trans('tour.pricing.step2.title') }}",
+        content: "{{ trans('tour.pricing.step2.content') }}"
     },
     {
         element: "#p1_services",
-        title: "{{trans('tour.pricing.step3.title')}}",
-        content: "{{trans('tour.pricing.step3.content')}}"
-    },
-    {
-        element: "#p1_appointments",
-        title: "{{trans('tour.pricing.step4.title')}}",
-        content: "{{trans('tour.pricing.step4.content')}}"
+        title: "{{ trans('tour.pricing.step3.title') }}",
+        content: "{{ trans('tour.pricing.step3.content') }}"
     },
     {
         element: "#plan2",
-        title: "{{trans('tour.pricing.step5.title')}}",
-        content: "{{trans('tour.pricing.step5.content')}}"
+        title: "{{ trans('tour.pricing.step4.title') }}",
+        content: "{{ trans('tour.pricing.step4.content') }}"
     }
     ]});
 

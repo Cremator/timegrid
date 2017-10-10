@@ -172,7 +172,7 @@
     @include('manager.contacts._appointment', ['appointments' => $contact->appointments()->orderBy('start_at')->ofBusiness($business->id)->Active()->get()] )
     @endif
 
-    @if(auth()->user()->isOwner($business->id))
+    @if(auth()->user()->isOwnerOf($business->id))
     {!! Button::large()->success(trans('user.appointments.btn.book_in_biz_on_behalf_of', ['biz' => $business->name, 'contact' => $contact->fullname()]))
                        ->asLinkTo(route('user.booking.book', ['business' => $business, 'behalfOfId' => $contact->id]))
                        ->withIcon(Icon::calendar())->block() !!}
@@ -266,7 +266,7 @@ $(document).ready(function() {
             $('<input>', {
                 'type': 'hidden',
                 'name': '_token',
-                'value': '{{{ csrf_token() }}}' // hmmmm...
+                'value': '{{ csrf_token() }}'
                 });
  
             var hiddenInput =
